@@ -1,6 +1,6 @@
-FROM alpine:3.15 as downloader
+FROM alpine:3.17 as downloader
 
-ARG RPORT_PAIRING_VERSION=2210.31.1138
+ARG RPORT_PAIRING_VERSION=2301.3.1146
 RUN apk add unzip
 
 WORKDIR /app/
@@ -22,6 +22,14 @@ RUN groupadd -g "${GID}" rport \
 
 USER rport
 COPY --chown=rport:rport rport-pairing.conf.template /etc/rport/rport-pairing.conf.template
+
+LABEL maintainer="Christoph Pock <dev+github@pocki.xyz>" \
+    org.label-schema.schema-version="1.0" \
+    org.label-schema.vcs-ref="github.com/pocki/rport-pairing-image" \
+    org.label-schema.name="rport-pairing" \
+    org.label-schema.description="RPort Pairing Service" \
+    org.label-schema.url="https://github.com/pocki/rport-pairing-image" \
+    org.label-schema.vcs-url="https://github.com/pocki/rport-pairing-image"
 
 EXPOSE 8080
 
