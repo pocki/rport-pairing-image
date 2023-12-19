@@ -1,3 +1,7 @@
+# RPort is no longer open-source [thanks to RealVNC](https://www.realvnc.com/en/discover/realone/)
+Updates and new versions are no longer possible.
+
+
 # rport-pairing image
 [![Docker](https://github.com/pocki/rport-pairing-image/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/pocki/rport-pairing-image/actions/workflows/docker-publish.yml)
 
